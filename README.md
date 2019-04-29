@@ -59,3 +59,10 @@ Please cite Caffe in your publications if it helps your research:
 
 
 
+
+## 具体编译运行方法：
+1.  添加Makefile.config文件
+2.  修改makefile 的 -lhdf5_hl -lhdf5 改为 hdf5_serial_hl hdf5_serial
+3.  修改 examples/cpp_classification/classification.cpp:2:0: warning: "USE_OPENCV" redefined
+4.  make -j16
+5.  运行 ./build/examples/MTSrc/MTMain.bin '/home/dafu/workspace/MTCNN_Caffe/examples/MTmodel' '/home/dafu/workspace/MTCNN_Caffe/examples/MTSrc/test2.jpg'
